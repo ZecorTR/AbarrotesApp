@@ -86,7 +86,10 @@ export default function LoginScreen({ navigation }) {
 
         {/* Logo / Header */}
         <View style={styles.header}>
-          <Text style={styles.logo}>🛒</Text>
+          <Image 
+    source={require('../../assets/logo.png')} // 1. Verifica que el archivo esté aquí
+    style={styles.logoImage} 
+  />
           <Text style={styles.appName}>Abarrotes Mandy</Text>
           <Text style={styles.subtitle}>Inicia sesión para hacer tu pedido</Text>
         </View>
@@ -244,6 +247,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
     paddingVertical: 13,
     backgroundColor: '#FAFFF8',
+  },
+  logoImage: {
+    width: 120,           // Ajusta según el tamaño de tu logo
+    height: 120,          // Ajusta según el tamaño de tu logo
+    borderRadius: 60,     // Opcional: si quieres que sea circular (la mitad del ancho)
+    resizeMode: 'contain', // Mantiene la forma de la imagen sin estirarla
   },
 
   loginBtn: {
