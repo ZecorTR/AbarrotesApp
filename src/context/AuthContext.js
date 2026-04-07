@@ -14,7 +14,7 @@ import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { auth, db, storage } from '../config/firebase';
 
 // 🔴 Pon aquí tu UID de admin
-const ADMIN_UID = 'TU_UID_DE_ADMIN';
+const ADMIN_UID = 'iqJMZCIaFHPRcXQAWPswmJrIgO63';
 
 const AuthContext = createContext(null);
 

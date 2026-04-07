@@ -128,7 +128,18 @@ export default function LoginScreen({ navigation }) {
               <Text style={{ fontSize: 16 }}>{showPass ? '🙈' : '👁️'}</Text>
             </TouchableOpacity>
           </View>
-
+          {/* Botón Login */}
+          <TouchableOpacity
+            style={[styles.loginBtn, loading && { opacity: 0.7 }]}
+            onPress={handleEmailLogin}
+            disabled={loading}
+            activeOpacity={0.85}
+          >
+            {loading
+              ? <ActivityIndicator color="#fff" />
+              : <Text style={styles.loginBtnText}>Entrar →</Text>
+            }
+          </TouchableOpacity>
           <View style={styles.divider}>
             <View style={styles.dividerLine} />
             <Text style={styles.dividerText}>o con tus cuentas</Text>
@@ -146,19 +157,6 @@ export default function LoginScreen({ navigation }) {
             <Text style={styles.googleText}>Continuar con Google</Text>
           </TouchableOpacity>
 
-          
-          {/* Submit */}
-          <TouchableOpacity
-            style={[styles.loginBtn, loading && { opacity: 0.7 }]}
-            onPress={handleEmailLogin}
-            disabled={loading}
-            activeOpacity={0.85}
-          >
-            {loading
-              ? <ActivityIndicator color="#fff" />
-              : <Text style={styles.loginBtnText}>Entrar →</Text>
-            }
-          </TouchableOpacity>
         </View>
 
         {/* Ir a Registro */}
