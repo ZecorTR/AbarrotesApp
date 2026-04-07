@@ -15,11 +15,11 @@ const firebaseConfig = {
   measurementId: "G-MKVRGZPLDS"
 };
 const app = initializeApp(firebaseConfig);
-
+ 
 // Auth con persistencia en AsyncStorage (para React Native)
 export const auth = initializeAuth(app, {
   persistence: getReactNativePersistence(AsyncStorage),
 });
-
-export const db = getFirestore(app);
+ 
+export const db = getFirestore(app, 'mandydb');
 export const storage = getStorage(app);
