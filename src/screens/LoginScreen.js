@@ -87,7 +87,7 @@ export default function LoginScreen({ navigation }) {
         {/* Logo / Header */}
         <View style={styles.header}>
           <Text style={styles.logo}>🛒</Text>
-          <Text style={styles.appName}>Abarrotes Don Pepe</Text>
+          <Text style={styles.appName}>Abarrotes Mandy</Text>
           <Text style={styles.subtitle}>Inicia sesión para hacer tu pedido</Text>
         </View>
 
@@ -95,22 +95,7 @@ export default function LoginScreen({ navigation }) {
         <View style={styles.card}>
           <Text style={styles.cardTitle}>Iniciar Sesión</Text>
 
-          {/* Botón Google */}
-          <TouchableOpacity
-            style={styles.googleBtn}
-            onPress={() => promptAsync()}
-            disabled={loading}
-            activeOpacity={0.85}
-          >
-            <Text style={styles.googleIcon}>G</Text>
-            <Text style={styles.googleText}>Continuar con Google</Text>
-          </TouchableOpacity>
-
-          <View style={styles.divider}>
-            <View style={styles.dividerLine} />
-            <Text style={styles.dividerText}>o con tu correo</Text>
-            <View style={styles.dividerLine} />
-          </View>
+          
 
           {/* Email */}
           <Text style={styles.label}>Correo electrónico</Text>
@@ -144,6 +129,24 @@ export default function LoginScreen({ navigation }) {
             </TouchableOpacity>
           </View>
 
+          <View style={styles.divider}>
+            <View style={styles.dividerLine} />
+            <Text style={styles.dividerText}>o con tus cuentas</Text>
+            <View style={styles.dividerLine} />
+          </View>
+
+          {/* Botón Google */}
+          <TouchableOpacity
+            style={styles.googleBtn}
+            onPress={() => promptAsync()}
+            disabled={loading}
+            activeOpacity={0.85}
+          >
+            <Text style={styles.googleIcon}>G</Text>
+            <Text style={styles.googleText}>Continuar con Google</Text>
+          </TouchableOpacity>
+
+          
           {/* Submit */}
           <TouchableOpacity
             style={[styles.loginBtn, loading && { opacity: 0.7 }]}

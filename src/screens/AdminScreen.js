@@ -30,14 +30,32 @@ export default function AdminScreen() {
   const [filter, setFilter] = useState('all');
 
   useEffect(() => {
-    if (!isAdmin) return;
-    // Escucha en tiempo real todos los pedidos
-    const q = query(collection(db, 'orders'), orderBy('createdAt', 'desc'));
-    const unsub = onSnapshot(q, (snap) => {
-      setOrders(snap.docs.map((d) => ({ id: d.id, ...d.data() })));
+    if (!isAdmin) {
       setLoading(false);
-    });
-    return unsub;
+      return;
+    }
+    let unsub = () => {};
+    try {
+      const q = query(collection(db, 'orders'), orderBy('createdAt', 'desc'));
+      unsub = onSnapshot(
+        q,
+        (snap) => {
+          setOrders(snap.docs.map((d) => ({ id: d.id, ...d.data() })));
+          setLoading(false);
+        },
+        (error) => {
+          // Ignorar errores de permisos al cerrar sesión
+          if (error.code !== 'permission-denied') {
+            console.warn('Error en listener de pedidos:', error.message);
+          }
+          setLoading(false);
+        }
+      );
+    } catch (e) {
+      console.warn('No se pudo iniciar listener:', e.message);
+      setLoading(false);
+    }
+    return () => unsub(); // cancelar al desmontar o al perder acceso admin
   }, [isAdmin]);
 
   async function changeStatus(orderId, newStatus) {
