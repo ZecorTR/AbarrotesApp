@@ -7,14 +7,14 @@ import { PRODUCTS, CATEGORIES } from '../data/products';
 import ProductCard from '../components/ProductCard';
 
 const COLORS = {
-  primary: '#8d0818',
+  primary: '#850000',
   primaryLight: '#8d0818',
   accent: '#8d0818',
   white: '#FFFFFF',
   bg: '#F9FBF4',
   lightGreen: '#E8F5E9',
   textDark: '#6f0000',
-  textGray: '#757575',
+  textGray: '#212121',
   border: '#ff0000',
 };
 

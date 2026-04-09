@@ -6,12 +6,12 @@ import {
 import { useCart } from '../context/CartContext';
 
 const COLORS = {
-  primary: '#2E7D32',
-  primaryLight: '#4CAF50',
+  primary: '#b90000',
+  primaryLight: '#370000',
   white: '#FFFFFF',
   bg: '#F9FBF4',
   lightGreen: '#E8F5E9',
-  textDark: '#1B5E20',
+  textDark: '#6b0000',
   textGray: '#555',
   accent: '#8BC34A',
 };

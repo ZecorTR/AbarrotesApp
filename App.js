@@ -23,7 +23,7 @@ const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 const COLORS = {
-  primary: '#2E7D32',
+  primary: '#4f0000',
   white: '#FFFFFF',
   gray: '#757575',
 };
@@ -38,7 +38,7 @@ const HEADER_OPTS = {
 function HomeStack() {
   return (
     <Stack.Navigator screenOptions={HEADER_OPTS}>
-      <Stack.Screen name="Home" component={HomeScreen} options={{ title: '🛒 Abarrotes Don Pepe' }} />
+      <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Abarrotes Mandy' }} />
       <Stack.Screen name="ProductDetail" component={ProductDetailScreen} options={{ title: 'Detalle del Producto' }} />
     </Stack.Navigator>
   );
@@ -123,7 +123,7 @@ function RootNavigator() {
   if (loading) {
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#F9FBF4' }}>
-        <ActivityIndicator size="large" color="#2E7D32" />
+        <ActivityIndicator size="large" color="#710202" />
       </View>
     );
   }
@@ -137,7 +137,7 @@ export default function App() {
     <AuthProvider>
       <CartProvider>
         <NavigationContainer>
-          <StatusBar style="light" backgroundColor={COLORS.primary} />
+          <StatusBar style='light' backgroundColor={COLORS.primary} />
           <RootNavigator />
         </NavigationContainer>
       </CartProvider>

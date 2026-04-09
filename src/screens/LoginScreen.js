@@ -15,8 +15,8 @@ const GOOGLE_ANDROID_CLIENT_ID = '729938513547-5kkuqg9cvbhthsaq19ncp1rba29m7d3m.
 
 const COLORS = {
   primary: '#b00000',
-  white: '#FFFFFF',
-  bg: '#F9FBF4',
+  white: '#ffffff',
+  bg: '#ffffff',
   lightGreen: '#E8F5E9',
   textDark: '#000000',
   textGray: '#757575',

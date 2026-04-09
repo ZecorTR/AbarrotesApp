@@ -5,11 +5,11 @@ import {
 } from 'react-native';
 
 const COLORS = {
-  primary: '#2E7D32',
+  primary: '#b90000',
   white: '#FFFFFF',
   lightGray: '#F1F8E9',
-  textDark: '#1B5E20',
-  textGray: '#555',
+  textDark: '#000000',
+  textGray: '#424242',
 };
 
 export default function ProductCard({ product, onPress }) {
