@@ -14,13 +14,13 @@ const GOOGLE_WEB_CLIENT_ID = '729938513547-5kkuqg9cvbhthsaq19ncp1rba29m7d3m.apps
 const GOOGLE_ANDROID_CLIENT_ID = '729938513547-5kkuqg9cvbhthsaq19ncp1rba29m7d3m.apps.googleusercontent.com';
 
 const COLORS = {
-  primary: '#2E7D32',
+  primary: '#b00000',
   white: '#FFFFFF',
   bg: '#F9FBF4',
   lightGreen: '#E8F5E9',
-  textDark: '#1B5E20',
+  textDark: '#000000',
   textGray: '#757575',
-  border: '#C8E6C9',
+  border: '#840000',
   red: '#E53935',
 };
 
@@ -90,8 +90,7 @@ export default function LoginScreen({ navigation }) {
     source={require('../../assets/logo.png')} // 1. Verifica que el archivo esté aquí
     style={styles.logoImage} 
   />
-          <Text style={styles.appName}>Abarrotes Mandy</Text>
-          <Text style={styles.subtitle}>Inicia sesión para hacer tu pedido</Text>
+        {/*<Text style={styles.subtitle}>Inicia sesión para hacer tu pedido</Text>*/}
         </View>
 
         {/* Card de login */}
@@ -128,7 +127,7 @@ export default function LoginScreen({ navigation }) {
               style={styles.showPassBtn}
               onPress={() => setShowPass(!showPass)}
             >
-              <Text style={{ fontSize: 16 }}>{showPass ? '🙈' : '👁️'}</Text>
+              <Text style={{ fontSize: 14 }}>{showPass ? '🙈' : '👁️'}</Text>
             </TouchableOpacity>
           </View>
           {/* Botón Login */}
@@ -140,9 +139,10 @@ export default function LoginScreen({ navigation }) {
           >
             {loading
               ? <ActivityIndicator color="#fff" />
-              : <Text style={styles.loginBtnText}>Entrar →</Text>
+              : <Text style={styles.loginBtnText}>Iniciar Sesion→</Text>
             }
           </TouchableOpacity>
+            <Text> </Text>
           <View style={styles.divider}>
             <View style={styles.dividerLine} />
             <Text style={styles.dividerText}>o con tus cuentas</Text>
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
     elevation: 5,
     marginBottom: 20,
   },
-  cardTitle: { fontSize: 18, fontWeight: '800', color: COLORS.textDark, marginBottom: 18 },
+  cardTitle: { fontSize: 18, fontWeight: '800', color: COLORS.textDark, marginBottom: 18 , textAlign: 'center'},
 
   googleBtn: {
     flexDirection: 'row',
@@ -249,8 +249,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#FAFFF8',
   },
   logoImage: {
-    width: 120,           // Ajusta según el tamaño de tu logo
-    height: 120,          // Ajusta según el tamaño de tu logo
+    width: 150,           // Ajusta según el tamaño de tu logo
+    height: 150,          // Ajusta según el tamaño de tu logo
     borderRadius: 60,     // Opcional: si quieres que sea circular (la mitad del ancho)
     resizeMode: 'contain', // Mantiene la forma de la imagen sin estirarla
   },
