@@ -6,11 +6,11 @@ import {
 import { useCart } from '../context/CartContext';
 
 const COLORS = {
-  primary: '#2E7D32',
+  primary: '#b90000',
   white: '#FFFFFF',
   bg: '#F9FBF4',
-  lightGreen: '#E8F5E9',
-  textDark: '#1B5E20',
+  lightWhite: '#E8F5E9',
+  textDark: '#6b0000',
   textGray: '#555',
   red: '#E53935',
 };
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     width: 60,
     height: 60,
     borderRadius: 10,
-    backgroundColor: COLORS.lightGreen,
+    backgroundColor: COLORS.lightWhite,
     alignItems: 'center',
     justifyContent: 'center',
     overflow: 'hidden',
@@ -164,7 +164,7 @@ const styles = StyleSheet.create({
     width: 28,
     height: 28,
     borderRadius: 8,
-    backgroundColor: COLORS.lightGreen,
+    backgroundColor: COLORS.lightWhite,
     alignItems: 'center',
     justifyContent: 'center',
     borderWidth: 1,
