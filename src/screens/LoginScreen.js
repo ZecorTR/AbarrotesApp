@@ -87,12 +87,11 @@ export default function LoginScreen({ navigation }) {
         {/* Logo / Header */}
         <View style={styles.header}>
           <Image 
-    source={require('../../assets/logo.png')} // 1. Verifica que el archivo esté aquí
+    source={require('../../assets/logo.png')} // ../../assets/logo.png es la ruta de como llegar a tu imagen desde esta pantalla
     style={styles.logoImage} 
   />
         {/*<Text style={styles.subtitle}>Inicia sesión para hacer tu pedido</Text>*/}
         </View>
-
         {/* Card de login */}
         <View style={styles.card}>
           <Text style={styles.cardTitle}>Iniciar Sesión</Text>
