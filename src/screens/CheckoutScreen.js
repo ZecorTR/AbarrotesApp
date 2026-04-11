@@ -9,11 +9,11 @@ import { useCart } from '../context/CartContext';
 import { useAuth } from '../context/AuthContext';
 
 const COLORS = {
-  primary: '#2E7D32',
+  primary: '#b90000',
   white: '#FFFFFF',
   bg: '#F9FBF4',
-  lightGreen: '#E8F5E9',
-  textDark: '#1B5E20',
+  lightWhite: '#ffbaba',
+  textDark: '#6b0000',
   textGray: '#555',
 };
 
@@ -68,7 +68,7 @@ export default function CheckoutScreen({ navigation }) {
           <Text style={styles.pickupEmoji}>🏪</Text>
           <View style={{ flex: 1 }}>
             <Text style={styles.pickupTitle}>Recoge en tienda física</Text>
-            <Text style={styles.pickupDesc}>Av. Juárez #42, Col. Centro · Lun–Sáb 8am–8pm</Text>
+            <Text style={styles.pickupDesc}>Calle Emiliano Zapata #420, Col. Loma Alta· Lun–Sáb 8am–8pm</Text>
           </View>
         </View>
 
@@ -131,7 +131,7 @@ export default function CheckoutScreen({ navigation }) {
 const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: COLORS.bg },
   container: { padding: 16, paddingBottom: 30 },
-  pickupBanner: { flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: COLORS.lightGreen, borderRadius: 16, padding: 16, marginBottom: 14, borderWidth: 1.5, borderColor: '#A5D6A7' },
+  pickupBanner: { flexDirection: 'row', alignItems: 'center', gap: 12, backgroundColor: COLORS.lightWhite, borderRadius: 16, padding: 16, marginBottom: 14, borderWidth: 1.5, borderColor: '#a7a7a7' },
   pickupEmoji: { fontSize: 36 },
   pickupTitle: { fontSize: 15, fontWeight: '800', color: COLORS.textDark, marginBottom: 2 },
   pickupDesc: { fontSize: 12, color: COLORS.textGray, lineHeight: 17 },
@@ -142,14 +142,14 @@ const styles = StyleSheet.create({
   orderName: { flex: 1, fontSize: 13, color: COLORS.textGray, fontWeight: '600' },
   orderQty: { fontSize: 13, color: COLORS.textDark, fontWeight: '700' },
   orderSubtotal: { fontSize: 14, color: COLORS.primary, fontWeight: '800' },
-  orderDivider: { height: 1, backgroundColor: COLORS.lightGreen, marginVertical: 10 },
+  orderDivider: { height: 1, backgroundColor: COLORS.lightWhite, marginVertical: 10 },
   orderTotal: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' },
   orderTotalLabel: { fontSize: 15, fontWeight: '800', color: COLORS.textDark },
   orderTotalValue: { fontSize: 22, fontWeight: '800', color: COLORS.primary },
   clientInfo: { fontSize: 16, fontWeight: '700', color: COLORS.textDark, marginBottom: 2 },
   clientEmail: { fontSize: 13, color: COLORS.textGray },
   paymentOption: { flexDirection: 'row', alignItems: 'center', gap: 12, borderWidth: 2, borderColor: '#E0E0E0', borderRadius: 14, padding: 14, marginBottom: 10, backgroundColor: '#FAFAFA' },
-  paymentOptionSelected: { backgroundColor: COLORS.lightGreen, borderColor: COLORS.primary },
+  paymentOptionSelected: { backgroundColor: COLORS.lightWhite, borderColor: COLORS.primary },
   paymentEmoji: { fontSize: 26 },
   paymentLabel: { fontSize: 13, fontWeight: '700', color: COLORS.textDark, marginBottom: 2 },
   paymentDesc: { fontSize: 11, color: COLORS.textGray, lineHeight: 16 },
