@@ -13,7 +13,7 @@ export const PRODUCTS = [
   // Lácteos
   {
     id: 1,
-    name: 'Leche Entera 1L',
+    name: 'Leche Entera LALA 1L',
     price: 22.5,
     category: 'lacteos',
     emoji: '🥛',
